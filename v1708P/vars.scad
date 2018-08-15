@@ -57,9 +57,11 @@ d5z=dZstandard;
 d7z=dZstandard;
 d8z=dZstandard;
 d9z=dZstandard;
-
+d10z=dZstandard;
 d11z=dZstandard;
 d12z=dZstandard;
+
+
 
 
 //frame
@@ -201,6 +203,8 @@ d9x=cylinderDRAWERbodyH+d6z; //should be based on clevis size?
 d9y=cylinderDRAWERbodyH+d8z;
 d8x=brickL+(d2z*2);
 d8y=max(5,(d9x-d6z));   //need to review fundamentals, 5 minimun unless d9 gets larger than d8
+d10x=18;
+d10y=3;
 d11x=1.5+(d1bolt1OD*2)+d1bushingOD;
 d11y=max((0.5+d1bushingL),4);
 
