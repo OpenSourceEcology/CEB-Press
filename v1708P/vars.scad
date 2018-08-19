@@ -85,6 +85,10 @@ f5z=fZstandard;
 f6y=8;
 f6z=fZstandard;
 
+f7y=0;
+f7x=0;
+f7z=fZstandard;
+
 f8y=brickW;
 f8z=fZstandard;
 f8boltD=1;
@@ -93,14 +97,17 @@ f9y=4.5;
 
 f9z=fZstandard;
 
-
-
+f10y=0;
+f10x=0;
+f10z=0;
 
 f12z=fZstandard;   
 
 f11x=1.25;
 f11z=fZstandard;
 
+f13x=f6y;
+f13y=f9y;
 f13z=fZstandard;
 
 f14y=3.5;

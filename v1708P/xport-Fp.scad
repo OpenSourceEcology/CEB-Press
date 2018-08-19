@@ -21,10 +21,15 @@ use <f14p.scad>;
 partspacing=1; //common distance between parts
 ps=partspacing;
 
-projection(cut = true) //use projection to create 2D DXF files
-//f1
+//f1 (1/2)
 projection(cut = true) //use projection to create 2f fXF files
-translate([f1y,f1x/2,0])
+translate([f1y,(f1x/2),0])
+rotate([0,0,90])
+f1p();
+
+//f1 (2/2)
+projection(cut = true) //use projection to create 2f fXF files
+translate([f1y,(f1x/2)+ps+f1x,0])
 rotate([0,0,90])
 f1p();
 
@@ -52,33 +57,39 @@ translate([f1y+ps+f2y+ps+f3y,(f3x/2)+ps+f3x,0])
 rotate([0,0,90])
 f3p();
 
-//f4 (1/3)
+//f4 (1/2)
 projection(cut = true)
 translate([f1y+ps+f2y+ps+f3y+ps+f4y,f4x/2,0])
 rotate([0,0,90])
 f4p();
 
-//f4 (2/3)
+//f4 (2/2)
 projection(cut = true)
 translate([f1y+ps+f2y+ps+f3y+ps+f4y,(f4x/2)+ps+f4x,0])
 rotate([0,0,90])
 f4p();
 
-//f4 (3/3)
-projection(cut = true)
-translate([f1y+ps+f2y+ps+f3y+ps+f4y,(f4x/2)+ps+f4x+ps+f4x,0])
-rotate([0,0,90])
-f4p();
-
-//f5 (1/1)
+//f5 (1/2)
 projection(cut = true)
 translate([f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y,f5x/2,0])
 rotate([0,0,90])
 f5p();
 
-//f6 (1/1)
+//f5 (2/2)
+projection(cut = true)
+translate([f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y,(f5x/2)+ps+f5x,0])
+rotate([0,0,90])
+f5p();
+
+//f6 (1/2)
 projection(cut = true)
 translate([f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y,f6x/2,0])
+rotate([0,0,90])
+f6p();
+
+//f6 (2/2)
+projection(cut = true)
+translate([f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y,(f6x/2)+ps+f6x,0])
 rotate([0,0,90])
 f6p();
 
@@ -88,9 +99,15 @@ f6p();
 //rotate([0,0,90])
 //f7p();
 
-//f8 (1/1)
+//f8 (1/2)
 projection(cut = true)
-translate([f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f7y+ps+f8y,f8x/2,0])
+translate([f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f7y+ps+f8y,0,0])
+rotate([0,0,90])
+f8p();
+
+//f8 (2/2)
+projection(cut = true)
+translate([f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f7y+ps+f8y,ps+f8x,0])
 rotate([0,0,90])
 f8p();
 
@@ -112,20 +129,33 @@ f9p();
 //rotate([0,0,90])
 //f10p();
 
-//f11 (1/2)
+//f11
+for(i=[0:5])
 projection(cut = true)
-translate([f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f7y+ps+f8y+ps+f9y+ps+f10y+ps+f11y,0,0])
+translate([f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f7y+ps+f8y+ps+f9y+ps+f10y+ps+f11y-(f11y/2),i*(ps+f11x),0])
 rotate([0,0,90])
 f11p();
 
-//f11 (2/2)
-projection(cut = true)
-translate([f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f7y+ps+f8y+ps+f9y+ps+f10y+ps+f11y,ps+f11x,0])
-rotate([0,0,90])
-f11p();
-
-//f12 (1/2)
+//f12 (1/1)
 projection(cut = true)
 translate([f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f7y+ps+f8y+ps+f9y+ps+f10y+ps+f11y+ps+f12y,f12x/2,0])
 rotate([0,0,90])
 f12p();
+
+//f13
+//projection(cut = true)
+//translate([f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f7y+ps+f8y+ps+f9y+ps+f10y+ps+f11y+ps+f12y+ps+f13y,f12x/2,0])
+//rotate([0,0,90])
+//f13p();
+
+//f14 (1/2)
+projection(cut = true)
+translate([f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f7y+ps+f8y+ps+f9y+ps+f10y+ps+f11y+ps+f12y+ps+f13y+ps+f14y,0,0])
+rotate([0,0,90])
+f14p();
+
+//f14 (2/2)
+projection(cut = true)
+translate([f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f7y+ps+f8y+ps+f9y+ps+f10y+ps+f11y+ps+f12y+ps+f13y+ps+f14y,ps+f14x,0])
+rotate([0,0,90])
+f14p();
