@@ -19,8 +19,6 @@ use<d12p.scad>;
 partspacing=1; //common distance between parts
 ps=partspacing;
 
-projection(cut = true) //use projection to create 2D DXF files
-
 //d1
 projection(cut = true) //use projection to create 2D DXF files
 translate([d1y,d1x/2,0])
