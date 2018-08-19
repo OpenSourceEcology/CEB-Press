@@ -16,7 +16,7 @@ grateA=17.5; //angle of grate
 //grateA=17.5; //angle of grate
 
 
-$fn=360; //defines resolution of circles. 8 is okay for review. 100  or greater should be used for for final dxf export.
+$fn=36; //defines resolution of circles. 8 is okay for review. 100  or greater should be used for for final dxf export.
 
 dZstandard=0.5; //thickness of steel to be cut for drawer parts
 fZstandard=0.5;
@@ -127,6 +127,8 @@ a5x=6;
 a5y=72;
 a5z=aZstandard;
 
+a6x=a2x;
+a6y=a1x;
 a6z=aZstandard;
 
 //guards
