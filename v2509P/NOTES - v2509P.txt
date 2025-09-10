@@ -1,0 +1,9 @@
+v2509P
+
+===Goals===
+
+Testing out using AI to review and edit code. Also will try to make yml GitHub Actions to generate svg and dxf files. Will try a GitHub Action using deepnest-next to nest parts for export.
+
+===Log===
+
+20250909 - Create new folder and notes text file. Ask GitHub copilot to review code.
