@@ -1,0 +1,21 @@
+# Build artifacts
+*.stl
+*.obj
+*.3mf
+*.amf
+
+# Temporary files
+*~
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Keep the generated assembly PNG
+!v2509P/assembly.png
