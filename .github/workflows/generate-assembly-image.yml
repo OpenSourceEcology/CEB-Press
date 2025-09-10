@@ -1,0 +1,75 @@
+name: Generate Assembly Image
+
+on:
+  push:
+    branches: [ main, master ]
+    paths: 
+      - 'v2509P/~ASSEMBLY.scad'
+      - 'v2509P/*.scad'
+  pull_request:
+    branches: [ main, master ]
+    paths: 
+      - 'v2509P/~ASSEMBLY.scad'
+      - 'v2509P/*.scad'
+  workflow_dispatch:
+
+jobs:
+  generate-image:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+    
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Install OpenSCAD
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y openscad xvfb
+    
+    - name: Generate PNG from ASSEMBLY.scad
+      run: |
+        cd v2509P
+        # Use xvfb-run to provide a virtual display for OpenSCAD rendering
+        # Try different camera angles to get a good view of the assembly
+        xvfb-run -a openscad --render --imgsize=1024,768 --colorscheme=Tomorrow --projection=ortho --camera=0,0,0,55,0,25,400 -o assembly.png ~ASSEMBLY.scad
+        
+        # Verify the image was created
+        if [ -f assembly.png ]; then
+          echo "✅ Assembly image generated successfully"
+          ls -la assembly.png
+        else
+          echo "❌ Failed to generate assembly image"
+          exit 1
+        fi
+    
+    - name: Update README with assembly image
+      run: |
+        # Check if the image reference already exists in README
+        if ! grep -q "assembly.png" README.md; then
+          echo "Adding assembly image to README..."
+          # Add the assembly image after the title with proper spacing
+          sed -i '/# CEB-Press/a\\n![CEB Press Assembly](v2509P/assembly.png)\n' README.md
+          echo "✅ README updated with assembly image"
+        else
+          echo "ℹ️  Assembly image already referenced in README"
+        fi
+    
+    - name: Commit and push if changed
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add v2509P/assembly.png README.md || true
+        
+        # Check if there are any changes to commit
+        if git diff --staged --quiet; then
+          echo "ℹ️  No changes to commit"
+        else
+          echo "📝 Committing changes..."
+          git commit -m "Update assembly image and README [skip ci]"
+          git push
+          echo "✅ Changes pushed successfully"
+        fi
