@@ -1,5 +1,7 @@
 # CEB-Press
 
+![CEB Press Assembly](v2509P/assembly.png)
+
 parametric ceb press using OpenSCAD
 
 https://wiki.opensourceecology.org/wiki/Ceb_press
