@@ -1,0 +1,83 @@
+name: Generate CNC Layout SVG
+
+on:
+  push:
+    branches: [ main, master ]
+    paths: 
+      - 'v2509P/~CNCLAYOUT.scad'
+      - 'v2509P/*.scad'
+  pull_request:
+    branches: [ main, master ]
+    paths: 
+      - 'v2509P/~CNCLAYOUT.scad'
+      - 'v2509P/*.scad'
+  workflow_dispatch:
+
+jobs:
+  generate-svg:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+    
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Install OpenSCAD
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y openscad xvfb
+    
+    - name: Generate SVG from CNCLAYOUT.scad
+      run: |
+        cd v2509P
+        # Use xvfb-run to provide a virtual display for OpenSCAD rendering
+        # For 2D projections, use top-down orthographic view
+        xvfb-run -a openscad --render --imgsize=2048,1536 --colorscheme=Tomorrow --projection=ortho --camera=0,0,0,0,0,0,1000 -o cnclayout.svg ~CNCLAYOUT.scad
+        
+        # Verify the SVG was created
+        if [ -f cnclayout.svg ]; then
+          echo "✅ CNC Layout SVG generated successfully"
+          ls -la cnclayout.svg
+          # Show file size for reference
+          du -h cnclayout.svg
+        else
+          echo "❌ Failed to generate CNC Layout SVG"
+          exit 1
+        fi
+    
+    - name: Update README with CNC layout SVG
+      run: |
+        # Check if the CNC layout SVG reference already exists in README
+        if ! grep -q "cnclayout.svg" README.md; then
+          echo "Adding CNC layout SVG to README..."
+          # Add the CNC layout SVG after the assembly image with proper spacing
+          if grep -q "assembly.png" README.md; then
+            # Add after the assembly image
+            sed -i '/assembly.png/a\\n## CNC Cutting Layout\n\n![CNC Cutting Layout](v2509P/cnclayout.svg)\n' README.md
+          else
+            # Add after the title if no assembly image exists
+            sed -i '/# Compressed Earth Block Press/a\\n## CNC Cutting Layout\n\n![CNC Cutting Layout](v2509P/cnclayout.svg)\n' README.md
+          fi
+          echo "✅ README updated with CNC layout SVG"
+        else
+          echo "ℹ️  CNC layout SVG already referenced in README"
+        fi
+    
+    - name: Commit and push if changed
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add v2509P/cnclayout.svg README.md || true
+        
+        # Check if there are any changes to commit
+        if git diff --staged --quiet; then
+          echo "ℹ️  No changes to commit"
+        else
+          echo "📝 Committing changes..."
+          git commit -m "Update CNC layout SVG and README [skip ci]"
+          git push
+          echo "✅ Changes pushed successfully"
+        fi
