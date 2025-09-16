@@ -1,4 +1,4 @@
-# CEB-Press
+# Compressed Earth Block Press
 
 ![CEB Press Assembly](v2509P/assembly.png)
 
