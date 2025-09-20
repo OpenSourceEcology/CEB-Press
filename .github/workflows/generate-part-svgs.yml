@@ -100,7 +100,9 @@ EOF
           echo "ℹ️  No new or changed SVG files to commit"
         else
           echo "📝 Committing SVG files..."
-          git commit -m "Generate individual part SVGs [skip ci]"
+          # Compose a descriptive commit message with updated parts
+          updated_parts=$(cd v2509P/svgs && ls -1 *.svg 2>/dev/null | sed 's/\.svg//g' | tr '\n' ',' | sed 's/,$//')
+          git commit -m "Auto-generate SVGs for updated parts: ${updated_parts} [skip ci]"
           git push
           echo "✅ SVG files pushed successfully"
         fi
