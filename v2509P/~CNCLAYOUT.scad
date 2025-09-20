@@ -166,13 +166,13 @@ d12p();
 
 //a1 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1y,a1x/2,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1y,a1y/2,0])
 rotate([0,0,0])
 a1p();
 
 //a2 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1y+ps+a2y,a2x/2,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1y+ps+a2y,a2y/2,0])
 rotate([0,0,0])
 a2p();
 
