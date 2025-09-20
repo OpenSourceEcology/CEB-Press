@@ -272,7 +272,7 @@ f12p();
 
 //f13 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a2x+ps+a3y+ps+a4y+ps+a5y+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11x+ps+f12y+ps+f13x,f13y/2,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a2x+ps+a3y+ps+a4y+ps+a5y+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11x+ps+f12y+ps+f13y,f13x/2,0])
 rotate([0,0,90])
 f13p();
 
