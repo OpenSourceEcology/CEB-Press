@@ -158,140 +158,158 @@ translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+p
 rotate([0,0,90])
 d11p();
 
-//d12 (1/2)
+//d12 (1/1)
 projection(cut = true)
 translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y,d12x/2,0])
 rotate([0,0,90])
 d12p();
 
-//a1 (1/1)
+//a1 (1/2)
 projection(cut = true)
 translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x,a1y/2,0])
 rotate([0,0,0])
 a1p();
 
-//a2 (1/1)
+//a1 (2/2)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a2x,a2y/2,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x,a1y/2,0])
+rotate([0,0,0])
+a1p();
+
+//a2 (1/2)
+projection(cut = true)
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a1x+ps+a2x+ps+a2x,a2y/2,0])
 rotate([0,0,0])
 a2p();
 
-//a3 (1/1)
+//a2 (2/2)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a2x+ps+a3x,a3x/2,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a2x,a2y/2,0])
+rotate([0,0,0])
+a2p();
+
+//a3 (1/2)
+projection(cut = true)
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a3x+ps+a3x,a3x/2,0])
+rotate([0,0,0])
+a3p();
+
+//a3 (2/2)
+projection(cut = true)
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a3x,a3x/2,0])
 rotate([0,0,0])
 a3p();
 
 //a4 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a2x+ps+a3x+ps+a4x,a4x/2,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x,a4x/2,0])
 rotate([0,0,0])
 a4p();
 
 //a5 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a2x+ps+a3x+ps+a4x+0.5+a5x,a5x/2,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x,a5x/2,0])
 rotate([0,0,0])
 a5p();
 
 //a6 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a2x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x,a6x/2,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x,a6x/2,0])
 rotate([0,0,90])
 a6p();
 
 //f1 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a2x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y,f1x/2,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y,f1x/2,0])
 rotate([0,0,90])
 f1p();
 
 //f2 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a2x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y,f2x/2,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y,f2x/2,0])
 rotate([0,0,90])
 f2p();
 
 //f3 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a2x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y,f3x/2,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y,f3x/2,0])
 rotate([0,0,90])
 f3p();
 
 //f4 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a2x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y,f4x/2,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y,f4x/2,0])
 rotate([0,0,90])
 f4p();
 
 //f5 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a2x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y,f5x/2,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y,f5x/2,0])
 rotate([0,0,90])
 f5p();
 
 //f6 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a2x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y,f6x/2,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y,f6x/2,0])
 rotate([0,0,90])
 f6p();
 
 //f8 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a2x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y,f8x/2,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y,f8x/2,0])
 rotate([0,0,90])
 f8p();
 
 //f9 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a2x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y,f9x/2,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y,f9x/2,0])
 rotate([0,0,90])
 f9p();
 
 //f11 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a2x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11y,f11x/2,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11y,f11x/2,0])
 rotate([0,0,90])
 f11p();
 
 //f12 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a2x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11x+ps+f12y,f12x/2,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11x+ps+f12y,f12x/2,0])
 rotate([0,0,90])
 f12p();
 
 //f13 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a2x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11x+ps+f12y+ps+f13y,f13x/2,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11x+ps+f12y+ps+f13y,f13x/2,0])
 rotate([0,0,90])
 f13p();
 
 //f14 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a2x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11x+ps+f12y+ps+f13x+ps+f14y,f14x/2,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11x+ps+f12y+ps+f13x+ps+f14y,f14x/2,0])
 rotate([0,0,90])
 f14p();
 
 //h1 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a2x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11x+ps+f12y+ps+f13x+ps+f14y+ps+h1y,h1x/2,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11x+ps+f12y+ps+f13x+ps+f14y+ps+h1y,h1x/2,0])
 rotate([0,0,90])
 h1p();
 
 //h2 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a2x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11x+ps+f12y+ps+f13x+ps+f14y+ps+h1y+ps+h2y,h2x/2,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11x+ps+f12y+ps+f13x+ps+f14y+ps+h1y+ps+h2y,h2x/2,0])
 rotate([0,0,90])
 h2p();
 
 //h7 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a2x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11x+ps+f12y+ps+f13x+ps+f14y+ps+h1y+ps+h2y+ps+h7y,h7x/2,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11x+ps+f12y+ps+f13x+ps+f14y+ps+h1y+ps+h2y+ps+h7y,h7x/2,0])
 rotate([0,0,90])
 h7p();
 
 //h8 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a2x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11x+ps+f12y+ps+f13x+ps+f14y+ps+h1y+ps+h2y+ps+h7y+ps+h8y,h8x/2,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11x+ps+f12y+ps+f13x+ps+f14y+ps+h1y+ps+h2y+ps+h7y+ps+h8y,h8x/2,0])
 rotate([0,0,90])
 h8p();
