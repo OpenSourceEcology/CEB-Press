@@ -44,16 +44,6 @@ use<h8p.scad>;
 partspacing=1; //common distance between parts
 ps=partspacing;
 
-projection(cut = true) //use projection to create 2D DXF files
-translate([-((96*2)+5),0,0])
-union(){
-cube([96,48,0.5]);
-translate([96+4,0,0])    
-cube([96,48,0.5]);
-translate([96,0,0])
-cube([4,0.01,0.5]);    
-}
-
 //d1
 projection(cut = true) //use projection to create 2D DXF files
 translate([d1y,d1x/2,0])
