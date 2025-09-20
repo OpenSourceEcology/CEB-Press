@@ -1,0 +1,106 @@
+name: Generate Individual Part SVGs
+
+on:
+  push:
+    branches: [ main, master ]
+    paths: 
+      - 'v2509P/*p.scad'
+      - 'v2509P/vars.scad'
+      - 'v2509P/modus.scad'
+  pull_request:
+    branches: [ main, master ]
+    paths: 
+      - 'v2509P/*p.scad'
+      - 'v2509P/vars.scad'
+      - 'v2509P/modus.scad'
+  workflow_dispatch:
+
+jobs:
+  generate-part-svgs:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+    
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Install OpenSCAD
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y openscad xvfb
+    
+    - name: Create SVGs directory
+      run: |
+        cd v2509P
+        mkdir -p svgs
+        echo "✅ Created svgs directory"
+    
+    - name: Generate SVGs for individual parts
+      run: |
+        cd v2509P
+        
+        # Find all individual part files (exclude assembly files)
+        part_files=$(ls -1 *p.scad | grep -E "^[a-z][0-9]+p\.scad$|^[a-z][a-z][0-9]+p\.scad$|^[a-z][0-9]+[a-z]p\.scad$|^[fd][0-9]+p\.scad$" | sort)
+        
+        echo "Found individual part files:"
+        echo "$part_files"
+        echo ""
+        
+        # Generate SVG for each part
+        for part_file in $part_files; do
+          part_name="${part_file%.scad}"
+          svg_file="svgs/${part_name}.svg"
+          temp_projection="/tmp/${part_name}_projection.scad"
+          
+          echo "🔄 Processing $part_file -> $svg_file"
+          
+          # Create temporary projection file with absolute paths
+          cat > "$temp_projection" << EOF
+include <$(pwd)/vars.scad>;
+use <$(pwd)/modus.scad>;
+use <$(pwd)/$part_file>;
+
+// Create a 2D projection of the part
+projection(cut=false)
+${part_name}();
+EOF
+          
+          # Generate SVG using OpenSCAD
+          if xvfb-run -a openscad --render --imgsize=800,600 -o "$svg_file" "$temp_projection" 2>/dev/null; then
+            echo "✅ Generated $svg_file"
+            ls -la "$svg_file"
+          else
+            echo "❌ Failed to generate $svg_file"
+            # Continue with other parts instead of failing the entire workflow
+          fi
+          
+          # Clean up temp file
+          rm -f "$temp_projection"
+        done
+        
+        echo ""
+        echo "📊 SVG Generation Summary:"
+        echo "Total part files found: $(echo "$part_files" | wc -l)"
+        echo "SVG files generated: $(ls -1 svgs/*.svg 2>/dev/null | wc -l)"
+        echo ""
+        echo "Generated SVG files:"
+        ls -la svgs/ || echo "No SVG files generated"
+    
+    - name: Commit and push SVG files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add v2509P/svgs/ || true
+        
+        # Check if there are any changes to commit
+        if git diff --staged --quiet; then
+          echo "ℹ️  No new or changed SVG files to commit"
+        else
+          echo "📝 Committing SVG files..."
+          git commit -m "Generate individual part SVGs [skip ci]"
+          git push
+          echo "✅ SVG files pushed successfully"
+        fi
