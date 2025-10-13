@@ -190,7 +190,7 @@ a2p();
 
 //a3 (1/2)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a2x+ps+a3x,0,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a3x,0,0])
 rotate([0,0,0])
 a3p();
 
