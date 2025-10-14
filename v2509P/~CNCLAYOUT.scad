@@ -46,7 +46,7 @@ ps=partspacing;
 
 //d1
 projection(cut = true) //use projection to create 2D DXF files
-translate([d1y,0,0])
+translate([d1y,d1x/2,0])
 rotate([0,0,90])
 d1p();
 
@@ -100,7 +100,7 @@ d5p();
 
 //d6 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y,0,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y,d6x/2,0])
 rotate([0,0,90])
 d6p();
 
@@ -118,7 +118,7 @@ d7p();
 
 //d8 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y,0,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y,d8x/2,0])
 rotate([0,0,90])
 d8p();
 
@@ -214,19 +214,19 @@ a5p();
 
 //a6 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x,0,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x,a6x/2,0])
 rotate([0,0,90])
 a6p();
 
 //f1 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y,0,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y,f1x/2,0])
 rotate([0,0,90])
 f1p();
 
 //f2 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y,0,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y,f2x/2,0])
 rotate([0,0,90])
 f2p();
 
@@ -268,48 +268,48 @@ f9p();
 
 //f11 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11y,0,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11y,f11x/2,0])
 rotate([0,0,90])
 f11p();
 
 //f12 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11x+ps+f12y,0,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11y+ps+f12y,f12x/2,0])
 rotate([0,0,90])
 f12p();
 
 //f13 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11x+ps+f12y+ps+f13y,0,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11y+ps+f12y+ps+f13y,0,0])
 rotate([0,0,90])
 f13p();
 
 //f14 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11x+ps+f12y+ps+f13x+ps+f14y,0,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11y+ps+f12y+ps+f13x+ps+f14y,0,0])
 rotate([0,0,90])
 f14p();
 
 //h1 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11x+ps+f12y+ps+f13x+ps+f14y+ps+h1y,0,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11y+ps+f12y+ps+f13x+ps+f14y+ps+h1y,h1x/2,0])
 rotate([0,0,90])
 h1p();
 
 //h2 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11x+ps+f12y+ps+f13x+ps+f14y+ps+h1y+ps+h2y,0,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11y+ps+f12y+ps+f13x+ps+f14y+ps+h1y+ps+h2y,h2x/2,0])
 rotate([0,0,90])
 h2p();
 
 //h7 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11x+ps+f12y+ps+f13x+ps+f14y+ps+h1y+ps+h2y+ps+h7y,0,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11y+ps+f12y+ps+f13x+ps+f14y+ps+h1y+ps+h2y+ps+h7y,h7x/2,0])
 rotate([0,0,90])
 h7p();
 
 //h8 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11x+ps+f12y+ps+f13x+ps+f14y+ps+h1y+ps+h2y+ps+h7y+ps+h8y,0,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x+ps+f1y+ps+f2y+ps+f3y+ps+f4y+ps+f5y+ps+f6y+ps+f8y+ps+f9y+ps+f11y+ps+f12y+ps+f13x+ps+f14y+ps+h1y+ps+h2y+ps+h7y+ps+h8y,h8x/2,0])
 rotate([0,0,90])
 h8p();
