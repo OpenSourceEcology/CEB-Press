@@ -2,9 +2,18 @@
 
 ![CEB Press Assembly](v2509P/assembly.png)
 
-## CNC Cutting Layout
+## CNC Cutting Layouts
 
-![CNC Cutting Layout](v2509P/cnclayout.svg)
+The CNC layouts are split by material thickness for easier manufacturing. The thickness is appended to the filename in decimals without the decimal point (e.g., `05` for 0.5", `0125` for 0.125").
+
+### All Parts
+![CNC Cutting Layout - All Parts](v2509P/cnclayout.svg)
+
+### 0.5" Thickness (Drawer, Frame, Arm Parts)
+![CNC Cutting Layout - 0.5" Thickness](v2509P/cnclayout05.svg)
+
+### 0.125" Thickness (Guard/Hopper Parts)
+![CNC Cutting Layout - 0.125" Thickness](v2509P/cnclayout0125.svg)
 
 parametric ceb press using OpenSCAD
 
