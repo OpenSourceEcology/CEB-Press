@@ -4,7 +4,7 @@
 
 ## CNC Cutting Layouts
 
-The CNC layouts are split by material thickness for easier manufacturing. The thickness is appended to the filename in decimals without the decimal point (e.g., `05` for 0.5", `0125` for 0.125").
+The CNC layouts are split by material thickness for easier manufacturing. The thickness (in inches) is appended to the filename without the decimal point (e.g., `05` for 0.5", `0125` for 0.125").
 
 ### All Parts
 ![CNC Cutting Layout - All Parts](v2509P/cnclayout.svg)
