@@ -4,38 +4,38 @@ use <modus.scad>;
 //push the F6 key on your key board twice for projection view
 //This file contains all parts with 0.5" thickness (d, f, and a parts)
 
-use<d1p.scad>;
-use<d2p.scad>;
-use<d3p.scad>;
-use<d4p.scad>;
-use<d5p.scad>;
-use<d6p.scad>;
-use<d7p.scad>;
-use<d8p.scad>;
-use<d9p.scad>;
-use<d10p.scad>;
-use<d11p.scad>;
-use<d12p.scad>;
+use <d1p.scad>;
+use <d2p.scad>;
+use <d3p.scad>;
+use <d4p.scad>;
+use <d5p.scad>;
+use <d6p.scad>;
+use <d7p.scad>;
+use <d8p.scad>;
+use <d9p.scad>;
+use <d10p.scad>;
+use <d11p.scad>;
+use <d12p.scad>;
 
-use<a1p.scad>;
-use<a2p.scad>;
-use<a3p.scad>;
-use<a4p.scad>;
-use<a5p.scad>;
-use<a6p.scad>;
+use <a1p.scad>;
+use <a2p.scad>;
+use <a3p.scad>;
+use <a4p.scad>;
+use <a5p.scad>;
+use <a6p.scad>;
 
-use<f1p.scad>;
-use<f2p.scad>;
-use<f3p.scad>;
-use<f4p.scad>;
-use<f5p.scad>;
-use<f6p.scad>;
-use<f8p.scad>;
-use<f9p.scad>;
-use<f11p.scad>;
-use<f12p.scad>;
-use<f13p.scad>;
-use<f14p.scad>;
+use <f1p.scad>;
+use <f2p.scad>;
+use <f3p.scad>;
+use <f4p.scad>;
+use <f5p.scad>;
+use <f6p.scad>;
+use <f8p.scad>;
+use <f9p.scad>;
+use <f11p.scad>;
+use <f12p.scad>;
+use <f13p.scad>;
+use <f14p.scad>;
 
 partspacing=1; //common distance between parts
 ps=partspacing;
