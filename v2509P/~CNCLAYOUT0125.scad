@@ -4,10 +4,10 @@ use <modus.scad>;
 //push the F6 key on your key board twice for projection view
 //This file contains all parts with 0.125" thickness (h parts)
 
-use<h1p.scad>;
-use<h2p.scad>;
-use<h7p.scad>;
-use<h8p.scad>;
+use <h1p.scad>;
+use <h2p.scad>;
+use <h7p.scad>;
+use <h8p.scad>;
 
 partspacing=1; //common distance between parts
 ps=partspacing;
