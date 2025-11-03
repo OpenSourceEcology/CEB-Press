@@ -59,11 +59,11 @@ jobs:
         xvfb-run -a openscad --render --imgsize=2048,1536 --colorscheme=Tomorrow --projection=ortho --camera=0,0,0,0,0,0,1000 -o cnclayout05.svg ~CNCLAYOUT05.scad
         
         if [ -f cnclayout05.svg ]; then
-          echo "✅ CNC Layout 0.5\" SVG generated successfully"
+          echo '✅ CNC Layout 0.5" SVG generated successfully'
           ls -la cnclayout05.svg
           du -h cnclayout05.svg
         else
-          echo "❌ Failed to generate CNC Layout 0.5\" SVG"
+          echo '❌ Failed to generate CNC Layout 0.5" SVG'
           exit 1
         fi
     
@@ -73,11 +73,11 @@ jobs:
         xvfb-run -a openscad --render --imgsize=2048,1536 --colorscheme=Tomorrow --projection=ortho --camera=0,0,0,0,0,0,1000 -o cnclayout0125.svg ~CNCLAYOUT0125.scad
         
         if [ -f cnclayout0125.svg ]; then
-          echo "✅ CNC Layout 0.125\" SVG generated successfully"
+          echo '✅ CNC Layout 0.125" SVG generated successfully'
           ls -la cnclayout0125.svg
           du -h cnclayout0125.svg
         else
-          echo "❌ Failed to generate CNC Layout 0.125\" SVG"
+          echo '❌ Failed to generate CNC Layout 0.125" SVG'
           exit 1
         fi
     
@@ -86,13 +86,23 @@ jobs:
         # Check if the CNC layout SVG references already exist in README
         if ! grep -q "cnclayout.svg" README.md; then
           echo "Adding CNC layout SVGs to README..."
+          
+          # Create the content to add
+          README_CONTENT="\\n## CNC Cutting Layouts\\n\\n"
+          README_CONTENT+="### All Parts\\n"
+          README_CONTENT+="![CNC Cutting Layout - All Parts](v2509P/cnclayout.svg)\\n\\n"
+          README_CONTENT+="### 0.5\" Thickness (Drawer, Frame, Arm Parts)\\n"
+          README_CONTENT+="![CNC Cutting Layout - 0.5\" Thickness](v2509P/cnclayout05.svg)\\n\\n"
+          README_CONTENT+="### 0.125\" Thickness (Guard/Hopper Parts)\\n"
+          README_CONTENT+="![CNC Cutting Layout - 0.125\" Thickness](v2509P/cnclayout0125.svg)\\n"
+          
           # Add the CNC layout SVGs after the assembly image with proper spacing
           if grep -q "assembly.png" README.md; then
             # Add after the assembly image
-            sed -i '/assembly.png/a\\n## CNC Cutting Layouts\n\n### All Parts\n![CNC Cutting Layout - All Parts](v2509P/cnclayout.svg)\n\n### 0.5" Thickness (Drawer, Frame, Arm Parts)\n![CNC Cutting Layout - 0.5" Thickness](v2509P/cnclayout05.svg)\n\n### 0.125" Thickness (Guard/Hopper Parts)\n![CNC Cutting Layout - 0.125" Thickness](v2509P/cnclayout0125.svg)\n' README.md
+            sed -i "/assembly.png/a\\${README_CONTENT}" README.md
           else
             # Add after the title if no assembly image exists
-            sed -i '/# Compressed Earth Block Press/a\\n## CNC Cutting Layouts\n\n### All Parts\n![CNC Cutting Layout - All Parts](v2509P/cnclayout.svg)\n\n### 0.5" Thickness (Drawer, Frame, Arm Parts)\n![CNC Cutting Layout - 0.5" Thickness](v2509P/cnclayout05.svg)\n\n### 0.125" Thickness (Guard/Hopper Parts)\n![CNC Cutting Layout - 0.125" Thickness](v2509P/cnclayout0125.svg)\n' README.md
+            sed -i "/# Compressed Earth Block Press/a\\${README_CONTENT}" README.md
           fi
           echo "✅ README updated with CNC layout SVGs"
         else

@@ -204,13 +204,13 @@ a4p();
 
 //a5 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x,0,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x,0,0]) // 0.5 is intentional reduced spacing for a5, copied from original layout
 rotate([0,0,0])
 a5p();
 
 //a6 (1/1)
 projection(cut = true)
-translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x,a6x/2,0])
+translate([d1y+ps+d2y+ps+d3y+ps+d4y+ps+d5y+ps+d6y+ps+d7y+ps+d8y+ps+d9y+ps+d10y+ps+d11y+ps+d12y+ps+a1x+ps+a1x+ps+a2x+ps+a2x+ps+a3x+ps+a3x+ps+a4x+0.5+a5x+ps+a6x,a6x/2,0]) // 0.5 is intentional reduced spacing for a5, copied from original layout
 rotate([0,0,90])
 a6p();
 
