@@ -1,7 +1,7 @@
 include <vars.scad>;
 use <modus.scad>;
 
-//push the F6 key on your key board twice for projection view
+//push the F6 key on your keyboard twice for projection view
 //This file contains all parts with 0.125" thickness (h parts)
 
 use <h1p.scad>;
